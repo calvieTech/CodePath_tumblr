@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3EA050A0214AF96A00C60DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0509F214AF96A00C60DA7 /* AppDelegate.swift */; };
-		3EA050A2214AF96A00C60DA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA050A1214AF96A00C60DA7 /* ViewController.swift */; };
 		3EA050A5214AF96A00C60DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA050A3214AF96A00C60DA7 /* Main.storyboard */; };
 		3EA050A7214AF96B00C60DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA050A6214AF96B00C60DA7 /* Assets.xcassets */; };
 		3EA050AA214AF96B00C60DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA050A8214AF96B00C60DA7 /* LaunchScreen.storyboard */; };
+		3EFB805A214AFC1E007A772A /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB8059214AFC1E007A772A /* PhotosViewController.swift */; };
+		3EFB805C214B02F7007A772A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB805B214B02F7007A772A /* PhotoCell.swift */; };
 		7BBD8D7BDF8A1292222F0C82 /* Pods_codePath_tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECA96C9A377E8B8553243D8 /* Pods_codePath_tumblr.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		1BD3011C8395684D538D4ABC /* Pods-codePath_tumblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codePath_tumblr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-codePath_tumblr/Pods-codePath_tumblr.debug.xcconfig"; sourceTree = "<group>"; };
 		3EA0509C214AF96A00C60DA7 /* codePath_tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codePath_tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0509F214AF96A00C60DA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3EA050A1214AF96A00C60DA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3EA050A4214AF96A00C60DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EA050A6214AF96B00C60DA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA050A9214AF96B00C60DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EA050AB214AF96B00C60DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFB8059214AFC1E007A772A /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		3EFB805B214B02F7007A772A /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		BC0492B9BBD82F8BAE824C89 /* Pods-codePath_tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codePath_tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-codePath_tumblr/Pods-codePath_tumblr.release.xcconfig"; sourceTree = "<group>"; };
 		EECA96C9A377E8B8553243D8 /* Pods_codePath_tumblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codePath_tumblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,8 +72,9 @@
 		3EA0509E214AF96A00C60DA7 /* codePath_tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				3EFB8059214AFC1E007A772A /* PhotosViewController.swift */,
+				3EFB805B214B02F7007A772A /* PhotoCell.swift */,
 				3EA0509F214AF96A00C60DA7 /* AppDelegate.swift */,
-				3EA050A1214AF96A00C60DA7 /* ViewController.swift */,
 				3EA050A3214AF96A00C60DA7 /* Main.storyboard */,
 				3EA050A6214AF96B00C60DA7 /* Assets.xcassets */,
 				3EA050A8214AF96B00C60DA7 /* LaunchScreen.storyboard */,
@@ -162,15 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-codePath_tumblr-checkManifestLockResult.txt",
 			);
@@ -184,17 +183,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-codePath_tumblr/Pods-codePath_tumblr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
@@ -210,8 +207,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EA050A2214AF96A00C60DA7 /* ViewController.swift in Sources */,
 				3EA050A0214AF96A00C60DA7 /* AppDelegate.swift in Sources */,
+				3EFB805C214B02F7007A772A /* PhotoCell.swift in Sources */,
+				3EFB805A214AFC1E007A772A /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

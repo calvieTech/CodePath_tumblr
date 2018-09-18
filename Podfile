@@ -7,5 +7,6 @@ target 'codePath_tumblr' do
 
   # Pods for codePath_tumblr
 	pod 'AlamofireImage'
+	pod 'AFNetworking'
 
 end
