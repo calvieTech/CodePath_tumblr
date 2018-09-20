@@ -27,6 +27,22 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let vc = segue.destination as! PhotoDetailsViewController
+            let post = posts[indexPath.row]
+            vc.photoURL = post
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
     // Network request snippet
     func fetchPhotos() {
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")!
